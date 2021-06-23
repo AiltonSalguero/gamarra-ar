@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Grid, Cell } from 'react-mdl';
 import Geocode from "react-geocode";
 
-export class MapContainer extends Component {
 
+class ArLocation5 extends Component {
     state = {
         loading: true,
         showingInfoWindow: false,
@@ -18,19 +18,7 @@ export class MapContainer extends Component {
 
     componentDidMount() {
         //this.get_data_stores();
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var lat = position.coords.latitude
-            var lng =  position.coords.longitude
-            console.log("Latitude is :", lat);
-            console.log("Longitude is :", lng);
-        });
         this.setState({
-            /*
-            mapCenter: {
-                lat: lat,
-                lng: lng,
-            },
-            */
             stores: [
                 {
                     "id": 1,
@@ -139,6 +127,13 @@ export class MapContainer extends Component {
                 },
                 {
                     "id": 16,
+                    "name": "Develogers",
+                    "adress": "Av Wiesse",
+                    "latitude": -11.9654429,
+                    "longitude": -76.9942375
+                },
+                {
+                    "id": 17,
                     "name": "Abraham Store",
                     "adress": "Av. Universitaria",
                     "latitude": -12.0751071,
@@ -147,60 +142,16 @@ export class MapContainer extends Component {
             ],
             loading: false
         })
-        
     }
 
-    distance(lat1, lon1, lat2, lon2, unit) {
-        if ((lat1 == lat2) && (lon1 == lon2)) {
-            return 0;
-        }
-        else {
-            var radlat1 = Math.PI * lat1/180;
-            var radlat2 = Math.PI * lat2/180;
-            var theta = lon1-lon2;
-            var radtheta = Math.PI * theta/180;
-            var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
-            if (dist > 1) {
-                dist = 1;
-            }
-            dist = Math.acos(dist);
-            dist = dist * 180/Math.PI;
-            dist = dist * 60 * 1.1515;
-            if (unit=="K") { dist = dist * 1.609344 }
-            if (unit=="N") { dist = dist * 0.8684 }
-            return dist;
-        }
-    }
-    /*
-    get_nearby_stores(stores,lat,lng){
-        const MAX_DIST = 30
-        for (const store of stores) {
-            if distance(store.latitude,store.longitude,lat,lng,"k") <
-
-        }
-    }
-    */
-
-    onMarkerClick = (props, marker, e) =>
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true
-        });
-
-    onMapClicked = (props) => {
-        if (this.state.showingInfoWindow) {
-            this.setState({
-                showingInfoWindow: false,
-                activeMarker: null
-            })
-        }
-    };
     get_data_stores() {
         const url = 'https://gamarraappserviceapi.azurewebsites.net/api/Usuario/ListUsuariosByCoordenadas/200/200';
         fetch(url).then(res => res.json()).then(data => {
             const stores = data['usuariosRolTiendaByQuery']
             console.log(stores);
+            stores.push({
+                "direccion_Direccion": "3905 Auxiliar Av. Fernando Wiesse, San Juan de Lurigancho, Municipalidad Metropolitana de Lima", "nombresComercial": "Develogers"
+            })
             this.get_stores(stores).then(data => {
                 this.setState({ stores: data, loading: false })
             })
@@ -208,8 +159,7 @@ export class MapContainer extends Component {
     }
     async get_location_from_adress(adress) {
         // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-        //Geocode.setApiKey("AIzaSyAwO1y7_y1hk2V9HR1FNCyQFB1JjdCVzk8");
-        Geocode.setApiKey("AIzaSyAwO1y7_y1hk2V9HR1FNCyQFB1JjdCVzk8");
+        Geocode.setApiKey("AIzaSyB-AIzaSyAwO1y7_y1hk2V9HR1FNCyQFB1JjdCVzk8");
 
         // set response language. Defaults to english.
         Geocode.setLanguage("es");
@@ -223,8 +173,7 @@ export class MapContainer extends Component {
     async get_stores(data_stores) {
         var id = 1;
         var stores = [];
-        var data = data_stores.sort()
-        for (const store of data) {
+        for (const store of data_stores) {
             const adress = store['direccion_Direccion']
             console.log(adress);
             var response = await this.get_location_from_adress(adress);
@@ -246,50 +195,38 @@ export class MapContainer extends Component {
         console.log(stores)
         return stores;
     }
+
     render() {
         if (this.state.loading) {
             return <div>Cargando...</div>
         }
         return (
-            <Map
-                google={this.props.google}
-                initialCenter={{
-                    lat: this.state.mapCenter.lat,
-                    lng: this.state.mapCenter.lng,
-                }}
-            >
-                {this.state.stores.map(marker => {
-                    //const onClick = props.onClick.bind(this, marker)
-                    return (
-                        <Marker
-                            key={marker.id}
+            <div>
 
-                            position={{ lat: marker.latitude, lng: marker.longitude }}
-                        >
-                            <InfoWindow>
-                                <div>
-                                    {marker.name}
-                                </div>
-                            </InfoWindow>
+                <a-scene vr-mode-ui="enabled: false"
+                    embedded
+                    arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+                    {this.state.stores.map(marker => {
+                        return (
+                            <a-text value={marker.name} geometry="primitive:plane"
+                                gps-projected-entity-place={"latitude:" + marker.latitude + "longitude:" + marker.longitude}
+                                position="0 15 0" scale="0.3 0.3 0.3" />
 
-                        </Marker>
-                    )
-                })}
+                        )
+                    })}
+                    {this.state.stores.map(marker => {
+                        return (
+                            <a-sphere gps-projected-entity-place={"latitude:" + marker.latitude + "longitude:" + marker.longitude} color="yellow" radius="5"></a-sphere>
 
+                        )
+                    })}
 
-                <InfoWindow
-                    pixelOffset={"0"}
-                    marker={this.state.activeMarker}
-                    visible={this.state.showingInfoWindow}>
-                    <div>
-                        <h1>{this.state.selectedPlace.name}</h1>
-                    </div>
-                </InfoWindow>
-            </Map>
+                    <a-camera gps-camera rotation-reader></a-camera>
+                </a-scene>
+
+            </div>
         )
     }
-}
 
-export default GoogleApiWrapper({
-    apiKey: ('AIzaSyAwO1y7_y1hk2V9HR1FNCyQFB1JjdCVzk8')
-})(MapContainer)
+}
+export default ArLocation5;

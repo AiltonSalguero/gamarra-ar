@@ -5,3 +5,10 @@ body {
     background-size: cover;
     -o-background-size: cover;
   }
+
+  .btn-primary {
+    background-color: #a328ff !important; 
+    border-color: #4e1977;
+    color: #fff !important;
+    border-radius: 24px!important;
+}

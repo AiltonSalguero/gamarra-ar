@@ -1,32 +1,32 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/a.css';
-import { Link, HashRouter } from 'react-router-dom'
+import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+import { Link, BrowserRouter } from 'react-router-dom'
+import "bootstrap/dist/css/bootstrap.min.css";
+import logo from './logo.png';
 class Home extends Component {
     render() {
-
+        // TODO traer las funciones de carga de datos aqui para que no cargue doble o triple xd ycarge una sola vez
         return (
-            <body>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
-
-                </nav>
-                <div class="container">
-                    <div class="card border-0 shadow my-5">
-                        <div class="card-body p-5">
-                            <h1 class="font-weight-light">Encuentra tiendas cercanas en Gamarra</h1>
-                            <p class="lead"></p>
-                            <p class="lead"></p>
-                            <div style={{ "height": "300" }}></div>
-                            <p class="lead mb-0">Selecciona una opcion</p>
-                            <Link to="/">Inicio</Link>
-                            <p class="lead mb-0">  </p>
-                            <Link to="/arlocation">AR</Link>
-                            <p class="lead mb-0">  </p>
-                            <Link to="/maplocation">Mapa</Link>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src={logo} class="img-fluid" />
                     </div>
                 </div>
-            </body>
+                <div class="row" className="mb-2">
+                    <div class="col text-center">
+                        <Button className="btn btn-primary btn-lg btn-block" href="https://kyssnar.github.io/location-ar0a8hz/">AR</Button>
+                    </div>
+                </div>
+                <div class="row" className="mb-2">
+                    <div class="col text-center">
+                        <Button className="btn btn-primary btn-lg btn-block" href="/gamarra-ar/maplocation">Mapa</Button>
+                    </div>
+                </div>
+            </div>
+
         )
     }
 }
