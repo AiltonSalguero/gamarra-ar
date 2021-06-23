@@ -9,23 +9,28 @@ class Home extends Component {
     render() {
         // TODO traer las funciones de carga de datos aqui para que no cargue doble o triple xd ycarge una sola vez
         return (
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <img src={logo} class="img-fluid" />
+
+            <BrowserRouter basename="/gamarra-ar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <img src={logo} class="img-fluid" />
+                        </div>
+                    </div>
+                    <div class="row" className="mb-2">
+                        <div class="col text-center">
+                            <Button className="btn btn-primary btn-lg btn-block" href="https://kyssnar.github.io/location-ar0a8hz/">AR</Button>
+                        </div>
+                    </div>
+                    <div class="row" className="mb-2">
+                        <div class="col text-center">
+                            <Link className="btn btn-primary btn-lg btn-block" to="/maplocation">Mapa</Link>
+                        </div>
                     </div>
                 </div>
-                <div class="row" className="mb-2">
-                    <div class="col text-center">
-                        <Button className="btn btn-primary btn-lg btn-block" href="https://kyssnar.github.io/location-ar0a8hz/">AR</Button>
-                    </div>
-                </div>
-                <div class="row" className="mb-2">
-                    <div class="col text-center">
-                        <Button className="btn btn-primary btn-lg btn-block" href="/gamarra-ar/maplocation">Mapa</Button>
-                    </div>
-                </div>
-            </div>
+
+            </BrowserRouter>
+
 
         )
     }
