@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/gamarra-ar/static/css/main.1fb7e905.chunk.css",
-    "main.js": "/gamarra-ar/static/js/main.15ae5551.chunk.js",
-    "main.js.map": "/gamarra-ar/static/js/main.15ae5551.chunk.js.map",
+    "main.js": "/gamarra-ar/static/js/main.74f2c857.chunk.js",
+    "main.js.map": "/gamarra-ar/static/js/main.74f2c857.chunk.js.map",
     "runtime-main.js": "/gamarra-ar/static/js/runtime-main.334b0df8.js",
     "runtime-main.js.map": "/gamarra-ar/static/js/runtime-main.334b0df8.js.map",
     "static/css/2.22f5d879.chunk.css": "/gamarra-ar/static/css/2.22f5d879.chunk.css",
-    "static/js/2.42d52496.chunk.js": "/gamarra-ar/static/js/2.42d52496.chunk.js",
-    "static/js/2.42d52496.chunk.js.map": "/gamarra-ar/static/js/2.42d52496.chunk.js.map",
+    "static/js/2.3940f590.chunk.js": "/gamarra-ar/static/js/2.3940f590.chunk.js",
+    "static/js/2.3940f590.chunk.js.map": "/gamarra-ar/static/js/2.3940f590.chunk.js.map",
     "static/js/3.0511d70e.chunk.js": "/gamarra-ar/static/js/3.0511d70e.chunk.js",
     "static/js/3.0511d70e.chunk.js.map": "/gamarra-ar/static/js/3.0511d70e.chunk.js.map",
     "index.html": "/gamarra-ar/index.html",
     "static/css/2.22f5d879.chunk.css.map": "/gamarra-ar/static/css/2.22f5d879.chunk.css.map",
     "static/css/main.1fb7e905.chunk.css.map": "/gamarra-ar/static/css/main.1fb7e905.chunk.css.map",
-    "static/js/2.42d52496.chunk.js.LICENSE.txt": "/gamarra-ar/static/js/2.42d52496.chunk.js.LICENSE.txt",
+    "static/js/2.3940f590.chunk.js.LICENSE.txt": "/gamarra-ar/static/js/2.3940f590.chunk.js.LICENSE.txt",
     "static/media/logo.b30ed51f.png": "/gamarra-ar/static/media/logo.b30ed51f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.334b0df8.js",
     "static/css/2.22f5d879.chunk.css",
-    "static/js/2.42d52496.chunk.js",
+    "static/js/2.3940f590.chunk.js",
     "static/css/main.1fb7e905.chunk.css",
-    "static/js/main.15ae5551.chunk.js"
+    "static/js/main.74f2c857.chunk.js"
   ]
 }
