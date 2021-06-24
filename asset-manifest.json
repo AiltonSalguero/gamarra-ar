@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gamarra-ar/static/css/main.1fb7e905.chunk.css",
-    "main.js": "/gamarra-ar/static/js/main.72a6ff1f.chunk.js",
-    "main.js.map": "/gamarra-ar/static/js/main.72a6ff1f.chunk.js.map",
+    "main.js": "/gamarra-ar/static/js/main.fd67c64c.chunk.js",
+    "main.js.map": "/gamarra-ar/static/js/main.fd67c64c.chunk.js.map",
     "runtime-main.js": "/gamarra-ar/static/js/runtime-main.6bd581b8.js",
     "runtime-main.js.map": "/gamarra-ar/static/js/runtime-main.6bd581b8.js.map",
     "static/css/2.22f5d879.chunk.css": "/gamarra-ar/static/css/2.22f5d879.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.22f5d879.chunk.css",
     "static/js/2.2847fe7e.chunk.js",
     "static/css/main.1fb7e905.chunk.css",
-    "static/js/main.72a6ff1f.chunk.js"
+    "static/js/main.fd67c64c.chunk.js"
   ]
 }
