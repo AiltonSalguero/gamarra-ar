@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/gamarra-ar/static/css/main.1fb7e905.chunk.css",
-    "main.js": "/gamarra-ar/static/js/main.2eccb860.chunk.js",
-    "main.js.map": "/gamarra-ar/static/js/main.2eccb860.chunk.js.map",
-    "runtime-main.js": "/gamarra-ar/static/js/runtime-main.334b0df8.js",
-    "runtime-main.js.map": "/gamarra-ar/static/js/runtime-main.334b0df8.js.map",
+    "main.js": "/gamarra-ar/static/js/main.f339e885.chunk.js",
+    "main.js.map": "/gamarra-ar/static/js/main.f339e885.chunk.js.map",
+    "runtime-main.js": "/gamarra-ar/static/js/runtime-main.fc386d63.js",
+    "runtime-main.js.map": "/gamarra-ar/static/js/runtime-main.fc386d63.js.map",
     "static/css/2.22f5d879.chunk.css": "/gamarra-ar/static/css/2.22f5d879.chunk.css",
-    "static/js/2.43099946.chunk.js": "/gamarra-ar/static/js/2.43099946.chunk.js",
-    "static/js/2.43099946.chunk.js.map": "/gamarra-ar/static/js/2.43099946.chunk.js.map",
-    "static/js/3.0511d70e.chunk.js": "/gamarra-ar/static/js/3.0511d70e.chunk.js",
-    "static/js/3.0511d70e.chunk.js.map": "/gamarra-ar/static/js/3.0511d70e.chunk.js.map",
+    "static/js/2.96934176.chunk.js": "/gamarra-ar/static/js/2.96934176.chunk.js",
+    "static/js/2.96934176.chunk.js.map": "/gamarra-ar/static/js/2.96934176.chunk.js.map",
+    "static/js/3.95cb1067.chunk.js": "/gamarra-ar/static/js/3.95cb1067.chunk.js",
+    "static/js/3.95cb1067.chunk.js.map": "/gamarra-ar/static/js/3.95cb1067.chunk.js.map",
     "index.html": "/gamarra-ar/index.html",
     "static/css/2.22f5d879.chunk.css.map": "/gamarra-ar/static/css/2.22f5d879.chunk.css.map",
     "static/css/main.1fb7e905.chunk.css.map": "/gamarra-ar/static/css/main.1fb7e905.chunk.css.map",
-    "static/js/2.43099946.chunk.js.LICENSE.txt": "/gamarra-ar/static/js/2.43099946.chunk.js.LICENSE.txt",
+    "static/js/2.96934176.chunk.js.LICENSE.txt": "/gamarra-ar/static/js/2.96934176.chunk.js.LICENSE.txt",
     "static/media/logo.b30ed51f.png": "/gamarra-ar/static/media/logo.b30ed51f.png",
     "static/media/store.22fa2c5e.png": "/gamarra-ar/static/media/store.22fa2c5e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.334b0df8.js",
+    "static/js/runtime-main.fc386d63.js",
     "static/css/2.22f5d879.chunk.css",
-    "static/js/2.43099946.chunk.js",
+    "static/js/2.96934176.chunk.js",
     "static/css/main.1fb7e905.chunk.css",
-    "static/js/main.2eccb860.chunk.js"
+    "static/js/main.f339e885.chunk.js"
   ]
 }
